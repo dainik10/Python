@@ -1,0 +1,7 @@
+n=int(input())
+l=list(map(int,input().split()))
+r=[]
+for p in l:
+    if(p not in r):
+        r.append(p)
+print(r)  
