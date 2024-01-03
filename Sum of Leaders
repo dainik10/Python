@@ -1,0 +1,16 @@
+n = int(input())
+l=list(map(int,input().split()))
+
+lead=0
+flag=False 
+for i in range(n):
+    for j in range(i+1,n):
+        if (l[i]>l[j]):
+            flag=True
+        else:
+            flag=False
+            break
+    if (flag==True):
+        lead+=l[i]
+lead+=l[-1]
+print(lead) 
