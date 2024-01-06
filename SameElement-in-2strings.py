@@ -1,0 +1,7 @@
+s1=input()
+s2=input()
+set1=set(s1)
+set2=set(s2)
+d1=sorted(set1 & set2)
+d2=''.join(d1)
+print(d2)
