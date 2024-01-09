@@ -183,7 +183,8 @@ for i,j in d.items():
 print()    
         
             
-# String Methods:-    
+# String Methods:- 
+
 s="Good Morning all"
 r=s.split()
 print(r)
@@ -195,3 +196,62 @@ r='-'.join(s)
 print(r)
 r=" ".join(s)
 print(r)
+
+s="Dainik Bheda"
+r=s.count('a') 
+r=s.index('a')
+r=s.find("a")
+r=s.rfind("a")
+r=s.replace("a","A")
+print(r)
+
+# s=" Mumbai, Maharashtra " #strip() method is used to remove the spaces from the string
+# r1=s.strip() #strip() method is used to remove the spaces from the string
+# r2=s.isspace() #isspace() method is used to check the string contains only spaces or not
+# print(r1,r2)
+
+# write a program to read the string from the user and find revese of the string and check whether the string is palindrome or not.
+s = input("String:")
+r=''
+for p in range(len(s)-1,-1,-1):
+    r=r+s[p]
+print("Palindrome:")
+if s == r:
+    print("Yes")
+else:
+    print("No")                                                   
+
+s="lokesh it"
+v="aeiouAEIOU"
+vc=0
+cc=0
+for p in s:
+    if p in v:
+        vc=vc+1 
+    elif p==" ":    
+        pass    
+    else:
+        cc=cc+1
+print("Vowels:",vc)
+print("Consonants:",cc)    
+
+# methods in dictionary:
+    # 1. clear()
+    # 2. copy()
+    # 3. fromkeys()
+    # 4. get()
+    # 5. items()
+    # 6. keys()
+    # 7. pop()
+    # 8. popitem()
+    # 9. setdefault()
+    # 10. update()
+    # 11. values()
+   
+s={'a':10,'b':20,'c':30}
+r=s.update({'d':40})
+r2=s.update({'d':50,'e':60})
+r3=s.pop('a')    
+r5=s.clear()
+print(r,r2,r3,r5,sep="\n")
+
