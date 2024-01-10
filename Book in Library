@@ -1,0 +1,22 @@
+# wap with book name, author name, and create 3 book. read the info from the main program and pass it to the class
+
+class book:
+    lname="p1"
+    def __init__(self, name, aname, np, cost):
+        self.name=name
+        self.aname=aname
+        self.np=np
+        self.cost=cost
+    def display(self):
+        print(book.lname,self.name, self.aname, self.np, self.cost)
+n=int(input("Enter the number of books: "))
+i=1
+while(i<=n):
+    bname=input("Enter the name of a book: ")
+    aname=input("Enter the name of a author: ")
+    np=int(input("Enter the number of pages: "))
+    cost=int(input("Enter the cost of a book: "))
+    b1=book(bname, aname, np, cost)
+    b1.display()
+    i=i+1
+    print("-----------------------------------------")    
