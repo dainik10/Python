@@ -1,0 +1,72 @@
+# double linked list:-
+# double linked list is a collection of nodes and every node will be connected with the next node.
+# in double linked list every node will contain three fields.
+# 1) prev(previous node address)
+# 2) data
+# 3) next(next node address)
+# for the 1st node prev node address will be null. 
+# for the last node next field address will be null. 
+# the basic opetrations we can perform on the double linked list are:-
+# 1) creating the nodes
+# 2) inserting the data into the nodes.
+# 3) displaying the data present in the nodes.
+# 4) reversing the data present in the nodes through the tail.
+# 5) adding the node
+# 6) deleting the node
+
+# Logic for double linked list:-
+class Node:
+     def __init__(self,data):
+         self.data=data
+         self.prev=None
+         self.next=None
+ class dlinkedlist:
+     def __init__(self):
+         self.head=None
+         self.tail=None
+ d1=dlinkedlist()
+ n1=Node(10)
+ d1.head=n1
+ n2=Node(20)
+ n1.next=n2
+ n2.prev=n1
+ n3=Node(30)
+ n2.next=n3
+ n3.prev=n2
+ n4=Node(40)
+ n3.next=n4
+ n4.prev=n3
+ d1.tail=n4   
+
+# code for double linked list:-
+ class Node:
+     def __init__(self,data):
+         self.data=data
+         self.prev=None
+         self.next=None
+ class dlinkedlist:
+     def __init__(self):
+         self.head=None
+         self.tail=None
+     def display(self):
+         temp=self.head
+         if(self.head is None):
+             print("Linked list is empty")
+         else:
+          while(temp):
+             print(temp.data,end="<-->")
+             temp=temp.next
+ n1=Node(10)
+ d1=dlinkedlist()
+ d1.head=n1
+ n2=Node(20)
+ n1.next=n2
+ n2.prev=n1
+ n3=Node(30)
+ n2.next=n3
+ n3.prev=n2
+ n4=Node(40)
+ n3.next=n4
+ n4.prev=n3
+ d1.tail=n4
+ d1.display()
