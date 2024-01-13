@@ -165,3 +165,35 @@ n4=Node(40)
 n3.next=n4
 s1.node_pos(25,2)
 s1.display()
+
+#wap to delete the 1st node from a single linked list:-
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class slinkedlist:
+    def __init__(self):
+        self.head=None
+    def node_del(self):
+        temp=self.head
+        self.head=temp.next
+        temp.next=None
+    def display(self):
+        temp=self.head
+        if(self.head==None):
+            print("Linked list is empty")
+        else:
+         while(temp):
+            print(temp.data,end="-->")
+            temp=temp.next
+n1=Node(10)
+s1=slinkedlist()
+s1.head=n1
+n2=Node(20)
+n1.next=n2
+n3=Node(30)
+n2.next=n3
+n4=Node(40)
+n3.next=n4
+s1.node_del()
+s1.display()
