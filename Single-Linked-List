@@ -64,3 +64,35 @@ n2.next=n3
 n4=Node(40)
 n3.next=n4      
 s1.rdisplay()
+
+#wap to Add the Element at the beginning of the single linked list:-
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class slinkedlist:
+    def __init__(self):
+        self.head=None
+    def node_beg(self,data):
+        nb=Node(data)
+        temp=self.head
+        nb.next=temp    
+    def display(self):
+        temp=self.head
+        if(self.head==None):
+            print("Linked list is empty")
+        else:
+         while(temp):
+            print(temp.data,end="-->")
+            temp=temp.next
+n1=Node(10)
+s1=slinkedlist()
+s1.head=n1
+n2=Node(20)
+n1.next=n2
+n3=Node(30)
+n2.next=n3
+n4=Node(40)
+n3.next=n4
+s1.node_beg(5)
+s1.display()
