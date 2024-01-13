@@ -96,3 +96,37 @@ n4=Node(40)
 n3.next=n4
 s1.node_beg(5)
 s1.display()
+
+#wap to add the element at the last of the Single linked list:-
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class slinkedlist:
+    def __init__(self):
+        self.head=None
+    def node_end(self,data):
+        ne=Node(data)
+        temp=self.head
+        while(temp.next!=None):
+            temp=temp.next
+        temp.next=ne
+    def display(self):
+        temp=self.head
+        if(self.head==None):
+            print("Linked list is empty")
+        else:
+         while(temp):
+            print(temp.data,end="-->")
+            temp=temp.next
+n1=Node(10)
+s1=slinkedlist()
+s1.head=n1
+n2=Node(20)
+n1.next=n2
+n3=Node(30)
+n2.next=n3
+n4=Node(40)
+n3.next=n4
+s1.node_end(50)
+s1.display()
