@@ -1,0 +1,935 @@
+# In proceedure oriented programming we declare data as global then related fn as well as unrtealted fn can also access that data, security is missing' 
+# we can achieve the security with the help of object oriented programming.
+# OOP principles:
+# 1. Class
+# 2. Object
+# 3. Encapsulation
+# 4. inheritance
+# 5. Polymorphism
+# 6. Abstract class and interfaces
+
+# Class: class is a container which contains data and related operations in a single entity.
+# class is a collection of data members and member functions.
+# class is a collection of  variables and methods.
+# class is a collection of data and related operations.
+# data can be represented by variables and operations can be represented by methods.
+# within a class we can declare 3 types of variables:
+# 1.static variables
+# 2.non static variables
+# 3.local variables
+
+# we can define 3 types of methods within a  class:
+# 1.static methods
+# 2.non static methods
+# 3.class methods
+
+# Object: object is an instance of a class that is by creating object memory will be allocated for data members of a class. 
+# when class is created memory will be alloted for the static variables and the static methods.
+# when object is created memory will be alloted for the non static variables and non static methods.
+
+# Static variables:
+#  The variables which are declared within a class but outside of all methods, those variables are called as static variables. 
+#  we can access the static variable within a class by using class name and outside of a class by using the object name and class name.
+#  if the data is common to all objects then we can declare those variables as static variables.
+#  for static variables memory is alloted when the class is loaded.
+ 
+# Non static variables:
+#   the variables which are declared within a class and within a methods those variables are called as non static variables.
+#   we can accesss the non static variables within a class by using the self keyword and outside of a class by using the object name.
+#   if the data change from object to object then we can declare that variable as non static variable.
+  
+  
+# Non static methods:
+#      we can access the non static method by using the object name.
+#      for non static method memory is alloted when the object is created.
+#     if any method has defsult argument as a self the corresponding methodd is called as non static method.
+     
+
+# static methods:
+# we can access the static method by using the class name.
+# and for accessing the static method no nee dto create any object.
+
+# s=input()
+# for p in s:
+#     if(s.count(p)==1):
+#         print(p)
+#         break
+#     else:
+#         print("Either all characters are repeated or no character is repeated")
+
+
+# class test: # static variables
+#     a=1000
+#     b=2000
+#     def display(self):
+#         print(test.a,test.b)
+#     def update(self):
+#         test.a=test.a+10
+#         test.b=test.b+20
+# t1=test()
+# t1.display()
+# t1.update()
+# t2=test()
+# t2.display()
+# t2.update()
+# t2.display()
+
+# print(test.a,test.b)
+# t1=test()
+# print(t1.a,t1.b)
+
+# self always refers to current object.
+
+# class test: 
+#     def insert(self):
+#         self.a=1000
+#         self.b=2000
+#     def display(self):
+#         print(self.a,self.b)
+#     def update(self):
+#         self.a=self.a+10
+#         self.b=self.b+20
+# t1=test()
+# t1.insert()
+# t1.display()
+# t1.update()
+# t1.display()
+# t2=test()
+# t2.insert()
+# t2.display()
+
+# class test: 
+#     def insert(self, a,b):
+#         self.a=a
+#         self.b=b
+#     def display(self):
+#         print(self.a,self.b)
+
+# t1=test()
+# t1.insert(10,20)
+# print(t1.a,t1.b)
+
+# constructor: constructor is a special type of method.
+# we can define a constructor in python programming by using __init__.
+# constructor will be invoked automatically during creation of object, but method should be called externally.
+# we have 2 type of constructors:
+# 1. default constructor
+# 2. parameterized constructor
+
+# class test:
+#     def __init__(self):
+#         self.a=1000
+#         self.b=2000
+#     def display(self):
+#         print(self.a,self.b)
+# t1=test()
+# t1.display()
+# t2=test()
+# t2.display()
+
+# wap to find the area of a circle by using constructor.
+# r=int(input("Enter the radius of a circle: "))
+# class circle:
+#     def __init__(self):
+#         self.area=3.14*r*r
+#     def display(self):
+#         print("Area of a circle is: ",self.area)
+# c1=circle()
+# c1.display()
+
+# wap to find area of a rectangle and display the area
+# l=int(input("Enter the length of a rectangle: "))
+# b=int(input("Enter the breadth of a rectangle: "))
+# class rectangle:
+#     def __init__(self):
+#         self.area=l*b
+#     def display(self):
+#         print("Area of a rectangle is: ",self.area)
+# r1=rectangle()
+# r1.display()
+
+
+# wap to create a banking application with static, nonstatic and local variables, constructor and non static methods.before withdraw if the balance is less than 2000 dont perform the transaction.
+# before withdraw check the balance properly (sufficient funds available or not).
+
+# class cust():
+#     bank_name="HDFC"
+#     def __init__(self, name, accno, bal, add):
+#         self.name=name
+#         self.accno=accno
+#         self.bal=bal
+#         self.add=add
+#     def display(self):
+#         print(cust.bank_name, self.name, self.accno, self.bal, self.add)
+#     def check_bal(self):
+#         print("Balance is: ",self.bal)
+#     def deposit(self,amt):
+#         self.bal=self.bal+amt
+#     def withdraw(self,amt):
+#         if(amt<=self.bal):
+#             if(self.amt-amt>=2000):
+#                 self.bal=self.bal-amt
+#             else:
+#                 print("Insufficient funds")
+#         else:
+#             print("Insufficient funds")
+# c1=cust("Raj", 1234, 10000, "Hyd")
+# c1.display()
+# c1.check_bal()
+# c1.deposit(50000)
+# c1.check_bal()
+# c1.withdraw(2000)
+# c1.check_bal()
+# c1.withdraw(10000)
+# c1.check_bal()    
+            
+
+# wap to develop student class with static, non static and local variables, constructor and non static methods. name of student, rollno, address, and 3 subject marks. if marks greater than 35 then print pass, if any of less than 35 print fail and if pass calculate the grade.
+
+# name=input("Enter the name of a student: ")
+# rollno=int(input("Enter the rollno of a student: "))
+# address=input("Enter the address of a student: ")
+# sub1=int(input("Enter the marks of subject1: "))
+# sub2=int(input("Enter the marks of subject2: "))
+# sub3=int(input("Enter the marks of subject3: "))
+# class student:
+#     def __init__(self):
+#         self.name=name
+#         self.rollno=rollno
+#         self.address=address
+#         self.sub1=sub1
+#         self.sub2=sub2
+#         self.sub3=sub3
+        
+#     def display(self):
+#         print("Name of a student is: ",self.name)
+#         print("Rollno of a student is: ",self.rollno)
+#         print("Address of a student is: ",self.address)
+#         print("Marks of subject1 is: ",self.sub1)
+#         print("Marks of subject2 is: ",self.sub2)
+#         print("Marks of subject3 is: ",self.sub3)
+        
+#     def find_result(self):
+#         self.total=self.sub1+self.sub2+self.sub3
+#         self.avg=self.total/3
+#         if(self.sub1>=35 and self.sub2>=35 and self.sub3>=35):
+#             print("Pass")
+#             if(self.avg>=75):
+#                 print("Grade A")
+#             elif(self.avg>=60 and self.avg<75):
+#                 print("Grade B")
+#             elif(self.avg>=50 and self.avg<60):
+#                 print("Grade C")
+#             elif(self.avg>=35 and self.avg<50):
+#                 print("Grade D")
+#         else:
+#             print("Fail")
+# s1=student()
+# s1.display()
+# s1.find_result()
+
+# wap with book name, author name, and create 3 book. read the info from the main program and pass it to the class
+
+# class book:
+#     lname="p1"
+#     def __init__(self, name, aname, np, cost):
+#         self.name=name
+#         self.aname=aname
+#         self.np=np
+#         self.cost=cost
+#     def display(self):
+#         print(book.lname,self.name, self.aname, self.np, self.cost)
+# n=int(input("Enter the number of books: "))
+# i=1
+# while(i<=n):
+#     bname=input("Enter the name of a book: ")
+#     aname=input("Enter the name of a author: ")
+#     np=int(input("Enter the number of pages: "))
+#     cost=int(input("Enter the cost of a book: "))
+#     b1=book(bname, aname, np, cost)
+#     b1.display()
+#     i=i+1
+#     print("-----------------------------------------")    
+    
+
+# Create employ class with empname, emp_id, add, salary. create 3 objects and read the info from the main program and pass it to the class.
+    
+# class employee:
+#     Oname="Dainik Infotech"
+#     def __init__(self, emp_name, emp_id, add, salary):
+#         self.emp_name=emp_name
+#         self.emp_id=emp_id
+#         self.add=add
+#         self.salary=salary
+#     def display(self):
+#         print(employee.Oname,self.emp_name, self.emp_id, self.add, self.salary)
+# n=int(input("Enter the number of Employees: "))
+# i=1
+# while(i<=n):
+#     emp_name=input("Enter the name of Employee: ")
+#     emp_id=int(input("Enter the ID of Employee: "))
+#     add=input("Enter the address of employee: ")
+#     salary=int(input("Enter the salary of Employee: "))
+#     b1=employee(emp_name, emp_id, add, salary)
+#     b1.display()
+#     i=i+1
+#     print("-----------------------------------------") 
+    
+# class test:
+#     def add(a,b):
+#         return a+b
+#     def sub(a,b):
+#         return a-b     
+# s=test.add(10,5)
+# r=test.sub(12,7)      
+# print(s,r)
+
+# class triangle:
+#     def area(a,b):
+#         return (0.5*a*b)
+# print(triangle.area(2,3))
+
+
+# We can use a properties of 1 class inside another class in 2 ways:
+#     1. has a relationship 
+#     2. is a relationship(inheritance) 
+# The concept of using the properties of 1 class into another class by using the class name are reference variable name is known as has a relationship.
+
+# class x:
+#     a=1000
+#     def __init__(self):
+#         self.b=2000
+#     def m1(self):
+#         print("in m1:")
+# class y:
+#     c=3000
+#     def __init__(self):
+#         self.d=4000
+#     def m2():
+#         print("in m2:")
+#     def display(self):
+#         print(y.c)
+#         print(self.d)
+#         y.m2()
+#         x1=x()
+#         print(x1.a)
+#         print(x1.b)
+#         x1.m1()
+# y1=y()
+# y1.display() 
+
+# wap to create two classes 1 class name is employee and 2nd class name is test 
+# employee dname empid salary
+# update the salary in the test class then call display method 
+# create 2 objects of employee class in the main program and pass the object any method define in the test class
+
+# class employee:
+#     def __init__(self, name, empid, salary):
+#         self.name=name
+#         self.empid=empid
+#         self.salary=salary
+#     def display(self):
+#         print(self.name, self.empid, self.salary)    
+             
+# class test:
+#     def update(self, e):
+#         e.salary=e.salary+1000
+    
+# t=test()
+# e1=employee("Raj", 1234, 10000)
+# e2=employee("Smit", 2, 100000 )
+# t.update(e1)
+# e1.display()
+# t.update(e2)
+# e2.display()
+
+# class employee:
+#     def __init__(self, name, id1, sal):
+#         self.name=name
+#         self.id1=id1
+#         self.sal=sal
+#     def display(self):
+#         print(self.name, self.id1, self.sal)
+# class test:
+#     def update(e):
+#         e.display()
+#         e.sal=50000
+#         e.display()
+# e1=employee("Raj", 1234, 10000)
+# test.update(e1)
+        
+# wap to create 2 classes 1st class name is student and 2nd class name is findresult   
+# class student:
+#     def __init__(self, name, rollno, sub1, sub2, sub3):
+#         self.name=name
+#         self.rollno=rollno
+#         self.sub1=sub1
+#         self.sub2=sub2
+#         self.sub3=sub3
+#     def display(self):
+#         print(self.name, self.rollno, self.sub1, self.sub2, self.sub3)
+        
+# class findresult:
+#     def update(s):
+#         s.display()
+#         s.total=s.sub1+s.sub2+s.sub3
+#         s.avg=s.total/3
+#         if(s.sub1>=35 and s.sub2>=35 and s.sub3>=35):
+#             print("Pass")
+#         else:
+#             print("Fail")
+            
+# s1=student("Raj", 1, 50, 60, 70)
+# findresult.update(s1)
+# s2=student("Smit", 2, 35, 40, 50)
+# findresult.update(s2)
+
+# Inheritance: The concept of using the properties of 1 class into another class directly like as a same class members is known as inheritance.
+# A class which is extended by another class is known as a super class or base class. 
+# A class which is extended with another class is known as a sub class or derived class.
+# we can use super class propeeties into sub class directly like as a same class members.
+
+# class circle:
+#     def __init__(self, r):
+#         self.r=r
+#     def area(self):
+#         print("Area of a circle is: ",3.14*self.r*self.r)
+#     def perimeter(self):
+#         print("Perimeter of a circle is: ",2*3.14*self.r)
+# n=int(input())
+# a=circle(n)
+# a.area()
+# a.perimeter()
+
+# class x:
+#     a=1000
+#     def __init__(self):
+#         self.b=2000
+#     def m1(self):
+#         print("in m1:")
+# class y(x):
+#     c=3000
+#     def __init__(self):
+#         self.d=4000
+#         super().__init__()
+#     def m2():
+#         print("in m2:")
+#     def display(self):
+#         print(x.a)
+#         print(self.b)
+#         self.m1()
+#         print(y.c)
+#         self.m2()
+#         print(self.d)
+# y1=y()
+
+# Inheritance is classified into 6 types:
+#     1. single level inheritance
+#     2. multi level inheritance
+#     3. hierarchical inheritance
+#     4. multiple inheritance
+#     5. cyclic inheritance
+#     6. hybrid inheritance
+
+# Single Inheritance: The concept of inheriting the properties from only one super class to another class is known as single level inheritance.
+
+# Multi-level Inheritance: The concept of inheriting the properties from multiple classes into single class with the concept of one after another is known as multi level inheritance.
+
+# Hierarchical Inheritance: The concept of inheriting the properties from one class into multiple classes separately is known as hierarchical inheritance.
+
+# Multiple Inheritance: The concept of inheriting the properties from multiple classes into single class at a time is known as multiple inheritance.
+
+# Cyclic Inheritance: The concept of inheriting the properties from sub class to super class is known as cyclic inheritance.
+# Python will not support cyclic inheritance.
+
+# Hybrid Inheritance: The combination of single, multi level, hierarchical and multiple inheritance is known as hybrid inheritance.
+
+# class x:
+#     def m1(self):
+#         print("in m1:")
+# x1=x()
+# p=x1.__str__()
+# print(p)
+# x1.m1()        
+
+# Object class: Object class is a predefined class which is defined in built-in models. 
+# Object class is a super class for every class in python programming.
+# Object class properties we can access in everyclass directly and we can also access through every class reference variable.
+
+# class x:
+#     def m1(self):
+#         print("in m1:")
+# class y(x):
+#     def m2(self):
+#         print("in m2:")
+# print(x.__bases__)
+# print(y.__bases__)
+# y1=y()
+# y1.m1()
+# y1.m2()
+# p=y1.__hash__()
+# print(p)                
+
+# class person:
+#     def insert(self):
+#         self.name="Dainik"
+#         self.add="Mumbai"
+# class employee(person):
+#     def insert1(self):
+#         self.id1=1234
+# class salaried_employee(employee):
+#     def __init__(self):
+#         self.sal=10000
+#     def display(self):
+#         self.insert()
+#         self.insert1()
+#         print(self.name,self.add,self.id1,self.sal)
+# s1=salaried_employee()
+# s1.display()  
+
+# class student:
+#     def insert(self):
+#         self.name=input("Enter the name of a student: ")
+#         self.id1=int(input("enter id: "))  
+#         self.add=input("Enter the address of a student: ")
+# class DS(student):
+#     def __init__(self):
+#         self.s1=int(input("Enter the marks of subject1: "))
+#         self.s2=int(input("Enter the marks of subject2: "))
+#     def display(self):
+#         self.insert()
+#         print(self.name,self.id1,self.add,self.s1,self.s2)
+# class ML(student):
+#     def __init__(self):
+#         self.s3=int(input("Enter the marks of subject1: "))
+#         self.s4=int(input("Enter the marks of subject2: "))
+#     def display(self):
+#         self.insert()
+#         print(self.name,self.id1,self.add,self.s3,self.s4)   
+# d1=DS()
+# d1.display()
+# m1=ML()
+# m1.display()     
+
+#multiple inheritance code:-
+# class x:
+#     def m1(self):
+#         print("in m1:")
+# class y:
+#     def m1(self):
+#         print("in m1 of y:")
+# class z(x,y):
+#     def m2(self):
+#         print("in m2 of z:")
+# z1=z()
+# z1.m1()   
+
+# class parent:
+#     def add( a,b):
+#         print(a+b)
+# class child(parent):
+#     def sub( a, b):
+#         print(a-b)
+# c1=child()        
+# a=int(input("Enter the value of a: "))
+# b=int(input("Enter the value of b: "))       
+# print(parent.add(a,b)) 
+# print(child.sub(a,b))
+
+# Polymorphism: defining one thing in multiple forms is known as polymorphism.
+#  Polymorphism is divided into 2 types:
+#         1. Method overloading
+#         2. Method overriding
+        
+# Method overloading: The concept of defining multiple methods with same name, with same no of parameters are or different no of parameters within a class is known as method overloading.         
+# Method overloading is supported partially in python.        
+
+# class x:
+#     def m1(self):
+#         print("in m1 with no para: ")
+#     def m1(self,a):
+#         print("in m1 with one para: ")
+#     def m1(self,a,b):
+#         print("in m1 with 2 para: ")   
+# x1=x()
+# x1.m1(10,20)
+
+# Arbitory parameter:
+#     if any variable is preceded by star* then the corresponding parameter is called as arbitory parameter.
+#     Python supports 2 types of arbitory parameter:
+#         1.single star arbitory parameter
+#         2.multi star arbitory parameter
+# single star arbitory parameter type is considered as tuple    
+# multi star arbitory parameter type is considered as dictionary.    
+        
+# def d(*a):
+#     print(a)
+#     print(type(a))
+#     print(sum(a))
+# d(10,20,30)
+# d(1,2,3,4,5)   
+
+# def d(b, *a):
+#     print(a)
+#     print(b)
+#     print(sum(a)+ b)
+# d(10,20,30)         
+
+# class test:
+#     def op(self,d, *a):
+#         if(d=="int"):
+#             s1=0
+#         else:
+#             s1=''
+#         for p in a:
+#             s1=s1+p
+#         print(s1)             
+# t1=test()
+# t1.op("int",10,20,30)            
+# t1.op( "str","abc","xyz","pqr")
+
+# Method overrding: the concept of defining multiple methods with same name, with same no of parameters are or different no of parameters 1 in super class and another one in sub-class is known as method overriding.
+# when we override super class method within the sub class then by default sub class method only gets executed if sub class method is created.
+
+# class x:
+#     def m1(self):
+#         print("in m1 of x:")
+#     def m2(self):
+#         print("in m2 of x:")
+# class y(x):
+#     def m2(self):
+#         print("in m2 of y:")
+#     def m3(self):
+#         print("in m3 of y:")
+# class z(x):
+#     def m1(self):
+#         print("in m1 of z:")
+#     def m4(self):
+#         print("in m4 of z:")
+# y1=y()
+# y1.m2()
+# y1.m3()
+# z1=z()
+# z1.m1()
+# z1.m4()
+# z1.m2()
+           
+# class x:
+#     def m1(self):
+#         print("in m1:")
+#     def __str__(self):
+#         return "Python"
+# x1=x()
+# p=x1.__str__()
+# print(p)                                        
+            
+# class x:
+#     def __init__(self, name):
+#         self.name=name 
+#     def __str__(self):
+#         return self.name
+# x1=x("Python")
+# print(x1)
+# x2=x("Java")
+# print(x2)
+# x3=x("C")
+# print(x3)   
+
+# WAP to create with emp name, emp salary, and initialize the properties to constructor and return the values back to the main program without using any non-static and static methods.
+
+# def employee:
+#     def __init__(self ,name, id1,sal):
+#         self.name=name
+#         self.id1=id1
+#         self.sal=sal
+#     def __str__(self):
+#         d=self.name+" "+str(self.id1)+" "+str(self.sal)
+#         return d
+# e1=employee("Dainik",1,100000)
+# print(e1)     
+
+# defining multiple constructor with a same name with same number of parameters and 1 constructor is defined in super class and another constructor is defined at the sub class is called as constructor overriding
+# whenever we override super class constructor     
+
+# class x:
+#     def __init__(self):
+#         print("in constructor of x:")
+# class y(x):
+#     def __init__(self):
+#         print("in constructor of y:")
+#         super().__init__()
+# y1=y()  
+
+# class x:
+#     def __init__(self,a):
+#         print("in constructor of x:", a)
+# class y(x):  
+#     pass
+# y1=y(10)            
+           
+# class x:
+#     def __init__(self, a):
+#         self.a=a
+#         print(self.a*self.a)
+# class y(x):
+#     def __init__(self, a,b):
+#         self.a=a
+#         self.b=b
+#         super().__init__(a)
+#         print(self.a+self.b)
+# y1=y(20)  
+
+# class x:
+#     def __init__(self, a, b):
+#         self.a=a
+#         self.b=b
+#         print(self.a+self.b)
+# class y(x):
+#     def __init__(self, a):
+#         self.a=a
+#         print(self.a*self.a)
+#         super().__init__(10,5)
+# y1=y(20) 
+      
+# Magic methods in python programming: 
+# class bx:
+#     def __init__(self,p):
+#         self.p=p
+#     def _add_(self,other):
+#         d=self.p+other.p
+#         return d
+# class by:
+#     def _init_(self,p):
+#         self.p=p
+# b1=bx(200)
+# b2=by(100)
+# c=b1.__add__(b2)
+# print(c)                
+
+# class employee:
+#     def __init__(self, name, sal):
+#         self.name=name
+#         self.sal=sal
+#     def __mul__(self, other):
+#         d=self.sal*other.days
+#         return d    
+# class attendance:
+#     def __init__(self, name, days):
+#         self.name=name
+#         self.days=days
+# e1=employee("Dainik", 10000)
+# a1=attendance("Dainik", 20)
+# print(e1*a1)        
+            
+# from abc import *
+# class RBI(ABC):
+#     def min_bal(self):
+#         pass
+#     def RI(self):
+#         print("RI is 6.5%")
+# class SBI(RBI):
+#     def min_bal(self):
+#         print("Min-bal is 2000 rupees: ")
+# class HDFC(RBI):
+#     def min_bal(self):
+#         print("Min-bal is 5000 rupees: ")     
+# class ICICI(RBI):
+#     def min_bal(self):
+#         print("Min-bal is 500 rupees: ")       
+# s1=SBI()
+# s1.min_bal()
+# s1.RI()
+# h1=HDFC()
+# h1.min_bal()
+# h1.RI()
+# i1=ICICI()
+# i1.min_bal()
+# i1.RI()
+
+# from abc import *
+# class RBI(ABC):
+#     def min_bal(self):
+#         pass
+#     def RI(self):
+#         print("RI is 6.5%")
+# class SBI(RBI):
+#     def min_bal(self):
+#         print("Min-bal is 2000 rupees: ")
+# class HDFC(RBI):
+#     def min_bal(self):
+#         print("Min-bal is 5000 rupees: ")     
+# class ICICI(RBI):
+#     def min_bal(self):
+#         print("Min-bal is 500 rupees: ")     
+# s=input("Enter the bank name: ")
+# c=globals()[s]
+# c1=c()
+# c1.min_bal()
+# c1.RI()        
+            
+# from abc import *
+# class car(ABC):
+#     def __init__(self, regno):
+#         self.regno=regno
+#     def opentank(self):
+#         print("Fill the tank with reg no:",self.regno)
+#     def steering(self):
+#         pass
+#     def braking(self):
+#         pass
+# class Mercedes(car):
+#     def steering(self):
+#         print("Power Steering")
+#     def braking(self):
+#         print("ABS Braking") 
+# class Ferrari(car):
+#     def steering(self):
+#         print("Power Steering")
+#     def braking(self):
+#         print("Hydraulic Braking") 
+# m1=Mercedes("MH48BE0001")
+# m1.opentank()
+# m1.steering()
+# m1.braking()
+# f1=Ferrari("MH48BE0002")
+# f1.opentank()
+# f1.steering()
+# f1.braking()
+
+# Interface: Interface is a collection of abstract methods.
+# interface is implemented by inheriting the properties of ABC model.
+# from abc import *
+# class test(ABC):
+#     def operation(self):
+#         pass
+# class sub1(test):
+#     def operation(self, a):
+#         print(a*a)
+# class sub2(test):
+#     def operation(self, a):
+#         print(a**3)
+# class sub3(test):
+#     def operation(self, a, b):
+#         print(a+b)               
+# s1=sub1()
+# s1.operation(10)
+# s2=sub2()
+# s2.operation(10)
+# s3=sub3()
+# s3.operation(10,5)            
+    
+# from abc import *
+# class vehicle(ABC):
+#     def wheels(self):
+#         pass
+# class car(vehicle):
+#     def wheels(self):
+#         print("Car has 4 wheels")
+# class Bus(vehicle):
+#     def wheels(self):
+#         print("Bus has 6 wheels")
+# class bike(vehicle):
+#     def wheels(self):
+#         print("Bike has 2 wheels")
+# c1=car()
+# c1.wheels()
+# b1=Bus()
+# b1.wheels()
+# b2=bike()  
+# b2.wheels()  
+
+# Access specifiers and access modifiers:
+#     in python we have 3 accesss modifiers:
+#         1. private
+#         2. public
+#         3. protected                  
+# 1.public: if variables or method is public we can access anywhere withoin the program.
+
+# 2.protected:
+#     if the variable or method is protected we can access in the next immediate class(we cannot access in the main program).
+    
+# 3.private: if variable or method is private we can access within the same class 
+
+# class employee:  #public
+#     def __init__(self, name, id, sal, dep):
+#         self.name=name
+#         self.id=id
+#         self.sal=sal
+#         self.dep=dep
+    
+# e1=employee("Dainik", 1, 10000, "IT")
+# print(e1.name, e1.id, e1.sal, e1.dep)     
+
+# class employee: 
+#     def __init__(self, name, id, sal, dep):
+#         self.name=name
+#         self.id=id
+#         self.sal=sal
+#         self.dep=dep
+#     def display(self):
+#         print(e1.name, e1.id, e1.sal, e1.dep)     
+    
+# e1=employee("Dainik", 1, 10000, "IT")
+# e1.display()  
+
+# Protected variable can be declared using _(underscore).
+
+# class employee:
+#     def _init_(self,name,idl,sal,dep):
+#         self._name=name
+#         self._idl=idl
+#         self._sal=sal
+#         self._dep=dep
+#     def _display(self):
+#         print("Name :",self._name)
+#         print("Id :",self._idl)
+# class geeks(employee):
+#     def __init__(self,name,idl,sal,dep):
+#         super().__init__(name,idl,sal,dep)
+#     def display(self):
+#         self._display()
+#         print("Salary :",self._sal)
+#         print("Department :",self._dep)
+
+# e1=geeks("Dainik",145,100000,"Web-Dev")
+# e1.display()
+
+# Private variable:
+#      in py programming we can declare a private variable and private methods using __.  
+
+# class employee:
+#     __cname="Parul University"
+#     def __init__(self, name, id, sal, dep):
+#         self.__name=name
+#         self.__id=id
+#         self.__sal=sal
+#         self.__dep=dep
+#     def __display(self):
+#         print("College Name: ",employee.__cname)
+#         print("Name: ",self.__name)
+#         print("ID: ",self.__id)
+#         print("Salary: ",self.__sal)
+#         print("Department: ",self.__dep)
+#     def display(self):
+#         self.__display()
+# e1=employee("Dainik", 1, 500000, "Dev")
+# e1.display()                
+
+# wap to produce the number from 5 to 1 and append to the list using reccursion
+# def append_numbers(n, last):
+#     if n > 0:
+#         lst.append(n)
+#         append_numbers(n - 1, last)
+# numbers = []
+# append_numbers(5, numbers)
+# print(numbers)
+
+# l=[]
+# def num(n):
+#     if n==0:
+#         return
+#     else:
+#         l.append(n)
+#         num(n-1)    
+# num(5)
+# print(l)
