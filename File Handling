@@ -1,0 +1,44 @@
+# FILE HANDLING
+
+# files are used to store the data permanently 
+# we can perform different operation in our files such as we can open the file, we can update the file, read the data from the file, write the data in the file and we can append the data in the file and finnaly close the opened file
+# Different modes available:- 
+# r - indicates the read operation
+# w - indicates the write operation
+# a - indicates the append operation
+# r+ - indicates both read & write operation
+# w+ - indicates both write & read operation
+# a+ - indicates both append & read operation
+
+
+from demo11 import*
+a,b=map(int,input().split())
+s1=add(a,b)
+s2=sub(a,b)
+s3=mul(a,b)
+print(s1,s2,s3)
+
+# Reading data from the file:-
+x=open("C:/Users/hplap/OneDrive/Desktop/hi.txt")
+print(x.read())
+x.close()
+
+# Writing data from the file:-
+x=open("C:/Users/hplap/OneDrive/Desktop/hi.txt",'w')
+x.write("Ye kya kar dala mene")
+print("Data written successfully")
+x.close()
+
+# Appending data into the file:-
+x=open("C:/Users/hplap/OneDrive/Desktop/hi.txt",'a')
+x.write("Kora kagaz tha ye mann meraa \n Likh diya uspe naam teraa")
+print("File updated successfully")
+x.close()
+
+# r+ mode operation:-
+x=open("C:/Users/hplap/OneDrive/Desktop/hi.txt",'r+')
+print(x.read())
+x.write("Kora kagaz tha ye mann meraa \nLikh diya uspe naam teraa")
+print('\n')
+print(x.read())
+ x.close() 
