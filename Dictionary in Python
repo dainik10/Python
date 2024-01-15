@@ -1,0 +1,42 @@
+# Dictionary object can be created by using {} are by calling dict() function.
+# dictionary is a mutable object.
+# insertion order is preserved.
+# indexing and slicing is not supported.
+# duplicate keys are not allowed.
+# duplicate values are allowed.
+# dictionary is a collection of homogeneous and heterogeneous keys and values.
+# dictionary is a collection of key-value pairs.
+# the key and value pair are called items.
+
+# d={}
+# type(d)
+# d=['a':10,'b':20,'c':30]
+# print(d)
+# d['a']=60
+# print(d)
+
+
+# e={"Name":"Raj","id1":101, "Dept":20, "Salary":70000}
+# print(e)
+# print(e["Dept"])
+# d=e.get("Salary")
+# print(d)
+# e["Salary"]=80000
+# print(e)
+# e["subject"]="python"
+# print(e)
+# for p in e.keys():
+#     print(p)
+# for p in e.values():
+#     print(p)
+# for p,q in e.items():
+#     print(p,q)        
+# for s in e.items():
+#     print(s)       
+# for s in e.items():
+#     print(s[0],s[1])
+# r=sorted(list(e.keys()))
+# print(r)        
+   
+# Dictionary comprehension: the concepts of generating elements into dictionary object by writing some logic in the dictionary oios called as dictionary comprehension. 
+By using the dictionary comprehension we can reduce the number of lines of code
