@@ -152,3 +152,66 @@ while(True):
         print(q)
     elif(opt==4):
         break
+
+#Implementation of Queue using LinkedList:-
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class Queue:
+    def __init__(self, max_size):
+        self.head = None
+        self.max_size = max_size
+        self.size = 0
+
+    def isempty(self):
+        return self.head is None
+
+    def isfull(self):
+        return self.size == self.max_size
+
+    def enqueue(self, data):
+        if self.isfull():
+            print("Queue is full")
+            return
+        
+        if self.head is None:
+            self.head = Node(data)
+        else:
+            temp = self.head
+            while temp.next:
+                temp = temp.next
+            temp.next = Node(data)
+        self.size += 1
+
+    def dequeue(self):
+        if self.isempty():
+            print("Queue is empty")
+        else:
+            temp = self.head
+            self.head = temp.next
+            temp.next = None
+            self.size -= 1
+            print("Deleted element is:", temp.data)
+
+    def display(self):
+        temp = self.head
+        if self.head is None:
+            print("Queue is empty")
+        else:
+            while temp:
+                print(temp.data, end=" ")
+                temp = temp.next
+
+q1 = Queue(4)
+q1.enqueue(10)
+q1.enqueue(20)
+q1.enqueue(30)
+q1.enqueue(40)
+q1.enqueue(50)
+q1.display()
+q1.dequeue()
+q1.display()
+q1.dequeue()
+q1.display()
