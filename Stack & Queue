@@ -127,3 +127,28 @@ print(s)
 s.popleft()
 s.popleft()
 print(s)
+
+#Implementation of Queue using List:-
+q=[]
+size=int(input("Enter the size of Queue:"))
+top=-1
+while(True):
+    print("1. Push, 2. Pop, 3. Display, 4. Exit")
+    opt=int(input("Enter your option:"))
+    if(opt==1):
+        if(top<size-1):
+           top=top+1
+           ele=int(input("Enter the element:"))
+           q.append(ele)
+        else:
+            print("Queue is full")
+    elif(opt==2):
+        if(top==-1):
+            print("Queue is empty")
+        else:
+            print("Deleted element is:",q.pop(0))
+            top=top-1
+    elif(opt==3):
+        print(q)
+    elif(opt==4):
+        break
