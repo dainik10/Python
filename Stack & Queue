@@ -1,0 +1,24 @@
+# Stack:-
+# Stack works on the principle of LIFO(Last In First Out) means last inserted element will e removed first.
+# we can perform various operations on stack:-
+# 1. push() - insert element in stack
+# 2. pop() - remove element from stack
+# 3. display() - display element of stack
+
+# Push:-using push operation we can insert the element into the stack.
+# Pop:- using pop operation we can  retrieve or remove or delete the element from the stack.
+# Stack can be implemented in 3 ways:-
+# 1. using list
+# 2. using linkedlist
+# 3. using dequeue class.
+
+# Queue:- 
+# Queue works on the principle of FIFO(First In First Out) means first inserted element will be removed first.
+# we can perform various operations on queue:-
+# 1. enqueue() - insert element in queue
+# 2. dequeue() - remove element from queue
+# queue can be implememnted in 3 ways:-
+# 1. using list
+# 2. using linkedlist
+# 3. using dequeue class.
+
