@@ -22,3 +22,27 @@
 # 2. using linkedlist
 # 3. using dequeue class.
 
+# Implementation of stack using list:-
+s=[]
+size=int(input("Enter the size of stack:"))
+top=-1
+while(True):
+    print("1. Push, 2. Pop, 3. Display, 4. Exit")
+    opt=int(input("Enter your option:"))
+    if(opt==1):
+        if(top<size-1):
+           top=top+1
+           ele=int(input("Enter the element:"))
+           s.append(ele)
+        else:
+            print("Stack is full")
+    elif(opt==2):
+        if(top==-1):
+            print("Stack is empty")
+        else:
+            print("Deleted element is:",s.pop())
+            top=top-1
+    elif(opt==3):
+        print(s)
+    elif(opt==4):
+        break
