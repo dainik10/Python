@@ -14,6 +14,7 @@
 # --> bubble sort will arrange the elements in ascending order or descending order
 # ---> For ascending order we have to use greater than symbol and for lesser one we have to lesser than or equal to symbol.
 
+
 # wap for implementation of Bubble Sort with Function approach:-
 def bubble_sort(l):
   for i in range(len(l)-1):
@@ -40,6 +41,7 @@ print("Before sorting:",l)
 s = bubble_sort(l)
 print("After sorting:",s)
 
+
 # Selection Sort:-
 # In the selection sort the 1st eleement will be considered as minimum element in a list.
 # Remaining all the elements will be compared with the 1st element. 
@@ -59,6 +61,7 @@ l = list(map(int,input().split()))
 print("Before sorting:",l)
 s = selection_sort(l)
 print("After sorting:",s)
+
 
 # Merge Sort:-
 # Merge sort works on the principle of divide and conquer Technique.
@@ -89,4 +92,21 @@ def merge_sort(l):
 l = list(map(int,input("Enter the ele: ").split()))
 print("Before sorting:",l)
 s = merge_sort(l)
+print("After sorting:",s)
+
+
+# Insertion Sort:-
+def insertion_sort(l):
+    for i in range(1,len(l)):
+        key = l[i]
+        j = i-1
+        while(j>=0 and key<l[j]):
+            l[j+1]=l[j]     
+            j=j-1
+        l[j+1]=key
+        print(l)
+    return l
+l = list(map(int,input("Enter Elements: ").split()))
+print("Before sorting:",l)
+s = insertion_sort(l)
 print("After sorting:",s)
