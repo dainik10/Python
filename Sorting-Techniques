@@ -1,1 +1,28 @@
+#Sorting algorithm in python:-
+# ~> Python supports different sorting algorithm (seven - algorithm)
+# 1) Bubble sort
+# 2) Selection sort
+# 3) Insertion sort
+# 4) Merge sort
+# 5) Qucik sort
+# 6) Radix sort (frequency sort)
+# 7) heap sort
 
+# 1) Bubble sort:-
+# --> Bubble sort is worst sorting algorithm as comapre to all sorting algorithm.
+# --> In bubble sort we have to comapre the adjacent elements , if the elements are not sorted then we have to sort.
+# --> bubble sort will arrange the elements in ascending order or descending order
+# ---> For ascending order we have to use greater than symbol and for lesser one we have to lesser than or equal to symbol.
+
+# wap for implementation of Bubble Sort with Function approach:-
+def bubble_sort(l):
+  for i in range(len(l)-1):
+    for j in range(len(l)-1):
+        if(l[j]>l[j+1]):
+            l[j],l[j+1]=l[j+1],l[j]
+    print(l)
+  return l
+l = list(map(int,input().split()))
+print("Before sorting:",l)
+s = bubble_sort(l)
+print("After sorting:",s)
