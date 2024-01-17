@@ -1,0 +1,21 @@
+# Searching techniques in python:- python supports 2 type of Searching Technique:-
+# 1. Linear search
+# 2. Binary Search
+
+# Linear Search:- in the libnear Search we are going to compare key element with the each and every element of the list.
+# If the element is found then it will return the index position of the corresponding element.
+# If the element is not available then it will return -1. That is -1 is indicated as element is not found.
+# In the Linear Search we are going to compare each and every element with the key, so this algorithm will take more time to execute and time complexity also more.
+
+def linearSearch(l,key):
+    for i in range(len(l)):
+        if(l[i]==key):
+            return i
+    return -1
+l=list(map(int,input("Enter the list of elements:").split()))
+key=int(input("Enter the key element:"))
+s=linearSearch(l,key)
+if(s==-1):
+    print("Element is not found")
+else:
+    print("Element is found at index position:",s)
