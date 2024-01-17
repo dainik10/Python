@@ -26,3 +26,16 @@ l = list(map(int,input().split()))
 print("Before sorting:",l)
 s = bubble_sort(l)
 print("After sorting:",s)
+
+#for string sorting according to the length:-
+def bubble_sort(l):
+  for i in range(len(l)-1):
+    for j in range(len(l)-1):
+        if(len(l[j])>len(l[j+1])):
+            l[j],l[j+1]=l[j+1],l[j]
+    print(l)
+  return l
+l = list(map(str,input().split()))
+print("Before sorting:",l)
+s = bubble_sort(l)
+print("After sorting:",s)
