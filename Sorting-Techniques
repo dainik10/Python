@@ -59,3 +59,34 @@ l = list(map(int,input().split()))
 print("Before sorting:",l)
 s = selection_sort(l)
 print("After sorting:",s)
+
+# Merge Sort:-
+# Merge sort works on the principle of divide and conquer Technique.
+# First, we have to divide the elements into two equal parts, i.e., len(l)//2, this division is possible until the length==1. 
+# For dividing the elements into equal parts, we use reccursion technique. 
+# During comparison, we r going to compare left-side value with the right-side value, if the left-side value is less than the right-side value, then the left-side value will come first if condition is false then right-side value will come first.
+
+def merge(left,right):
+    merged = []
+    i,j = 0,0 
+    while(i<len(left) and j<len(right)):
+        if(left[i]<right[j]):
+            merged.append(left[i])
+            i+=1
+        else:
+            merged.append(right[j])
+            j+=1
+    merged=merged+left[i:]+right[j:]
+    return merged
+def merge_sort(l):
+    if(len(l)==1):
+        return l
+    else:
+        mid = len(l)//2
+        left = merge_sort(l[:mid])
+        right = merge_sort(l[mid:])
+        return merge(left,right)
+l = list(map(int,input("Enter the ele: ").split()))
+print("Before sorting:",l)
+s = merge_sort(l)
+print("After sorting:",s)
