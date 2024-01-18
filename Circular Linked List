@@ -86,3 +86,88 @@ cl = cll()
 cl.head = n1
 cl.tail = n4
 cl.reverse()
+
+# wap to add the node at the beginning of the circular linkedlist:-
+class Node:    #1
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+class cll:
+    def __init__(self):
+        self.head = None
+        self.tail = None        
+    def display(self):
+        if(self.head == None):
+            print("Linkedlist is empty")
+        else:
+            temp = self.head
+            while(True):
+                print(temp.data,end="-->")
+                temp = temp.next 
+                if(temp == self.head):
+                    break
+            print(temp.data)    
+    def node_beg(self,data):
+        newnode = Node(data)
+        if(self.head == None):
+            self.head = newnode
+            self.tail = newnode
+            newnode.next = self.head
+        else:
+            newnode.next = self.head
+            self.head = newnode
+            self.tail.next = self.head
+         
+n1=Node(10)
+n2=Node(20)
+n3=Node(30)
+n4=Node(40)
+n1.next = n2
+n2.next = n3
+n3.next = n4
+n4.next = n1
+cl = cll()
+cl.head = n1
+cl.tail = n4
+cl.node_beg(5)
+cl.display()
+ 
+class Node:     #2
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+class cll:
+    def __init__(self):
+        self.head = None
+        self.tail = None        
+    def display(self):
+        if(self.head == None):
+            print("Linkedlist is empty")
+        else:
+            temp = self.head
+            while(True):
+                print(temp.data,end="-->")
+                temp = temp.next 
+                if(temp == self.head):
+                    break
+            print(temp.data)    
+    def node_beg(self,data):
+        temp=self.head
+        newnode = Node(data)
+        self.head = newnode
+        newnode.next = temp
+        self.tail.next = newnode
+         
+n1=Node(10)
+n2=Node(20)
+n3=Node(30)
+n4=Node(40)
+n1.next = n2
+n2.next = n3
+n3.next = n4
+n4.next = n1
+cl = cll()
+cl.head = n1
+cl.tail = n4
+cl.node_beg(5)
+cl.display()
