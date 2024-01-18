@@ -211,3 +211,50 @@ cl.head = n1
 cl.tail = n4
 cl.node_end(50)
 cl.display()
+
+#wap to add the node at the given position in the circular linkedlist:-
+class Node:    
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+class cll:
+    def __init__(self):
+        self.head = None
+        self.tail = None        
+    def display(self):
+        if(self.head == None):
+            print("Linkedlist is empty")
+        else:
+            temp = self.head
+            while(True):
+                print(temp.data,end="-->")
+                temp = temp.next 
+                if(temp == self.head):
+                    break
+            print(temp.data)    
+    def node_pos(self,data):
+        temp=self.head
+        newnode = Node(data)
+        pos = int(input("Enter the position: "))
+        if(pos == 0):
+            self.node_beg(data)
+        elif(pos == 1):
+            self.node_end(data)
+        else:
+            for i in range(pos-1):
+                temp = temp.next
+            newnode.next = temp.next
+            temp.next = newnode
+n1=Node(10)
+n2=Node(20)
+n3=Node(30)
+n4=Node(40)
+n1.next = n2
+n2.next = n3
+n3.next = n4
+n4.next = n1
+cl = cll()
+cl.head = n1
+cl.tail = n4
+cl.node_pos(25)
+cl.display() 
