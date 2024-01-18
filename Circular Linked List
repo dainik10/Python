@@ -37,3 +37,52 @@ cl = cll()
 cl.head = n1
 cl.tail = n4
 cl.display()
+
+# wap to reverse the data present in the circular linkedlist:-
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+class cll:
+    def __init__(self):
+        self.head = None
+        self.tail = None        
+    def display(self):
+        if(self.head == None):
+            print("Linkedlist is empty")
+        else:
+            temp = self.head
+            while(True):
+                print(temp.data,end="-->")
+                temp = temp.next 
+                if(temp == self.head):
+                    break
+            print(temp.data)    
+    def reverse(self):
+        if(self.head == None):
+            print("Linkedlist is empty")
+        else:
+            temp = self.head
+            prev = None
+            while(True):
+                next = temp.next
+                temp.next = prev
+                prev = temp
+                temp = next
+                if(temp == self.head):
+                    break
+            self.head.next = prev
+            self.head = prev
+            self.display()
+n1=Node(10)
+n2=Node(20)
+n3=Node(30)
+n4=Node(40)
+n1.next = n2
+n2.next = n3
+n3.next = n4
+n4.next = n1
+cl = cll()
+cl.head = n1
+cl.tail = n4
+cl.reverse()
