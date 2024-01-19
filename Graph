@@ -1,0 +1,110 @@
+# # Graph:-
+# # ~> Graph is a collection of vertices and edges.
+# # ~> Vertices will be represented by circle or nodes or holes
+# Graph:-
+# ~>A Graph is a non-linear data structure consisting of vertices and edges. The vertices are sometimes also referred to as nodes and the edges are lines or arcs that connect any two nodes in the graph. More formally a Graph is composed of a set of vertices( V ) and a set of edges( E ). The graph is denoted by G(E, V).
+
+# # Components of a Graph:- 
+# ~ Vertices: Vertices are the fundamental units of the graph. Sometimes, vertices are also known as vertex or nodes. Every node/vertex can be labeled or unlabelled.
+
+# ~ Edges: Edges are drawn or used to connect two nodes of the graph. It can be ordered pair of nodes in a directed graph. Edges can connect any two nodes in any possible way. There are no rules. Sometimes, edges are also known as arcs. Every edge can be labeled/unlabelled.
+
+# ~> Graph is a collection of vertices and edges.
+# ~> Vertices will be represented by circle or nodes or holes.
+# ~> Edges will represented the line.
+# ~> Edges will connect the node.
+
+# Degree of a Node:-
+# ~>The no. of edges connected to each node.
+
+
+# # Size of a Graph:-
+# ~ Size of a graph will represent the total no. of edges in the graph.
+
+
+# # Different types of graphs:-
+
+
+# 1) Directed graph and Undirected graph:-
+# ~> If the direction is indicated between the edges then it will be called as directed graph.
+
+# ~>A graph in which edges have a direction, i.e., the edges have arrows indicating the direction of traversal. Example: A web page graph where links between pages are directional.
+
+
+# Undirected graph:-
+# ~>If No the direction is indicated between the edges then it will be called as Undirected graph.
+# ~>A graph in which edges have no direction, i.e., the edges do not have arrows indicating the direction of traversal. Example: A social network graph where friendships are not directional.
+
+# 3) Weighted Graphs:-
+# ~> A graph in which edges have weights or costs associated with them. Example: A road network graph where the weights can represent the distance between two cities.
+
+# ~> If the weight is specified between the edges then it calles as weighted graph
+
+
+# 4) Unweighted Graphs:-
+#  ~> A graph in which edges have no weights or costs associated with them. Example: A social network graph where the edges represent friendships.
+# ~> If the weight is not specified between the edges then it calles as weighted graph
+
+
+# 5) Bipartite Graphs:-
+#  ~>A graph in which the vertices can be divided into two disjoint sets such that every edge connects a vertex in one set to a vertex in the other set. Example: A job applicant graph where the vertices can be divided into job applicants and job openings.
+
+# 6)a. Cyclic Graph:-
+# ~> A graph with at least one cycle. Example: A bike-sharing graph where the cycles represent the routes that the bikes take.
+
+# b. Uncyclic Graphs:-
+# ~>If the graph is not forming the circle then it called is uncyclic graph.
+
+
+# 7) Sparse Graphs: A graph with relatively few edges compared to the number of vertices. Example: A chemical reaction graph where each vertex represents a chemical compound and each edge represents a reaction between two compounds.
+
+# 8)dense Graphs: A graph with many edges compared to the number of vertices. Example: A social network graph where each vertex represents a person and each edge represents a friendship.
+
+# 9)Complete Graphs:-
+# ~> A graph in which each vertex is connected to every other vertex. Example: A tournament graph where every player plays against every other player.
+
+# 10)Trees:-
+# ~> A connected graph with no cycles. Example: A family tree where each person is connected to their parents.
+
+# 11)Finite Graphs:-
+# ~>A graph is said to be finite if it has a finite number of vertices and a finite number of edges. A finite graph is a graph with a finite number of vertices and edges. In other words, both the number of vertices and the number of edges in a finite graph are limited and can be counted. Finite graphs are often used to model real-world situations, where there is a limited number of objects and relationships between the
+
+# 12). Infinite Graph:-
+# ~> A graph is said to be infinite if it has an infinite number of vertices as well as an infinite number of edges. 
+
+# 13)Trivial Graph:-
+# ~> A graph is said to be trivial if a finite graph contains only one vertex and no edge. A trivial graph is a graph with only one vertex and no edges. It is also known as a singleton graph or a single vertex graph. A trivial graph is the simplest type of graph and is often used as a starting point for building more complex graphs. In graph theory, trivial graphs are considered to be a degenerate case and are not typically studied in detail.
+
+# 14).Simple Graph:-
+# ~> A simple graph is a graph that does not contain more than one edge between the pair of vertices. A simple railway track connecting different cities is an example of a simple graph. 
+
+# 15).Multi Graph:-
+# Any graph which contains some parallel edges but doesn’t contain any self-loop is called a multigraph. For example a Road Map. 
+
+# Parallel Edges: If two vertices are connected with more than one edge then such edges are called parallel edges that are many routes but one destination.
+# Loop: An edge of a graph that starts from a vertex and ends at the same vertex is called a loop or a self-loop.
+
+# 16). Null Graph:-
+# ~>A graph of order n and size zero is a graph where there are only isolated vertices with no edges connecting any pair of vertices.A null graph is a graph with no edges. In other words, it is a graph with only vertices and no connections between them. A null graph can also be referred to as an edgeless graph, an isolated graph, or a discrete graph
+
+# 17).Complete Graph:-
+# ~>A simple graph with n vertices is called a complete graph if the degree of each vertex is n-1, that is, one vertex is attached with n-1 edges or the rest of the vertices in the graph. A complete graph is also called Full Graph. 
+
+# # Representation of a graph:-
+# ~> The graph will be represented in two ways:-
+
+# 1) Using Multi-dimension array.
+# 2) Using a list.
+
+# Graph supports 2 traversal techniques:-
+# 1) Breadth First Search (BFS)
+# 2) Depth First Search (DFS)
+
+# Breaddth First Search (BFS):-
+# Bfs is similar to implementation of the queue.
+
+# Depth First Search (DFS):-
+# DFS is similar to implementation of the stack.
+
+# Queue works on the principle of FIFO (First In First Out) technique.
+# Stack works on the principle of LIFO (Last In First Out) technique.
