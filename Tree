@@ -53,3 +53,59 @@
 # Postorder Traversal : Left, Right, Root
 # Preorder Traversal : Root, Left, Right
 # Inorder Traversal : Left, Root, Right
+
+# WAP to construct a binary tree and print the binary tree:-
+class Node:
+    def _init_(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+    def insert(self, data):
+        if self.data:
+            if data < self.data:
+                if self.left is None:
+                    self.left = Node(data)
+                else:
+                    self.left.insert(data)
+            elif data > self.data:
+                if self.right is None:
+                    self.right = Node(data)
+                else:
+                    self.right.insert(data)
+        else:
+            self.data = Node(data)
+    def print_tree(self):
+        if self.left:
+            self.left.print_tree()
+        print(self.data, end=" ")
+        if self.right:
+            self.right.print_tree()
+    def preorder(self):
+        print(self.data,end=" ")
+        if self.left:
+            self.left.preorder()
+        if self.right:
+            self.right.preorder()
+    def postorder(self):
+        if self.left:
+            self.left.postorder()
+        if self.right:
+            self.right.postorder()
+        print(self.data,end=" ")
+    def inorder(self):
+        if self.left:
+            self.left.inorder()
+        print(self.data,end=" ")
+        if self.right:
+            self.right.inorder()
+b=Node(10)
+b.insert(14)
+b.insert(35)
+b.insert(10)
+b.insert(19)
+b.insert(31)
+b.insert(35)
+b.print_tree()
+b.preorder()
+b.postorder()
+b.inorder()
