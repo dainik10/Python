@@ -1,0 +1,17 @@
+# NESTED WHILE:-
+# A nested while loop is a while loop inside another while loop.
+
+# WAP to print prime numbers b/w 1 to 100 using nested while loop:-
+l=[]
+i=2
+while i<=100:
+    c=0
+    q=1
+    while q<=i:
+        if i%q==0:
+            c=c+1
+        q=q+1
+    if c==2:
+        l.append(i)
+    i=i+1
+print(l)
