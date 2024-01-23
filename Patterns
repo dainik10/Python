@@ -28,3 +28,13 @@ while n<=10:
     fac.append(f)  
     n+=1 
 print(fac)
+
+n=int(input())
+i=n
+while(i>=1):
+    j=n
+    while(j>=i):
+        print(j,end=" ")
+        j-=1
+    i-=1
+    print()
