@@ -2,3 +2,12 @@
 # The method are:-
 # 1. Tabulor Method
 # 2. Memoization Method
+
+# finding the nth fibonacci number using recursive method:
+def feb(n):
+    if n<=1:
+        return n
+    return feb(n-1)+feb(n-2)
+n = int(input("Enter the number: "))
+f=feb(n)
+print(f)
