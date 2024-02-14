@@ -11,3 +11,18 @@ def feb(n):
 n = int(input("Enter the number: "))
 f=feb(n)
 print(f)
+
+# wap to find sum of left side nodes:-
+def LeftLeavesSumRec(root, isLeft, sum):
+    if root is None:
+        return
+    if root.left is None and root.right is None and isLeft:
+        sum[0] += root.data
+    LeftLeavesSumRec(root.left, 1, sum)
+    LeftLeavesSumRec(root.right, 0, sum)
+    return sum[0]
+def LeftLeavesSum(root):
+    sum = [0]
+    return LeftLeavesSumRec(root, 0, sum)
+root = LeftLeavesSumRec(20)
+print(LeftLeavesSum(root))
