@@ -23,3 +23,13 @@ x1.start()
 y1 = y()
 y1.start()
 
+#Scheduling:-
+# Among multiple threads, which thread has to start execution first, how much time it has to execute, after alloted time is over which thread has to continue the execution next is comes under scheduling.
+# Schediling is based on scheduling algorithm and every OS is performing dynamic scheduling algorithm so that scheduling is highly dynamic.
+# for every thread 1 name is assigned into the thread class. 
+
+# Thread Name:-
+# Python interpreter assign 1 unique name to wach and every thread.
+# we can get the name of the thread by calling getName() method of the thread class.
+# we can also assign our own names to the threads by calling setName() method of the thread class.
+
