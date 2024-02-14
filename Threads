@@ -33,3 +33,14 @@ y1.start()
 # we can get the name of the thread by calling getName() method of the thread class.
 # we can also assign our own names to the threads by calling setName() method of the thread class.
 
+import threading
+class x(threading.Thread):
+    def run(self):
+        print(self.getName())
+class y(threading.Thread):
+    def run(self):
+        print(self.getName())
+x1 = x()
+x1.start()
+y1 = y()
+y1.start() 
