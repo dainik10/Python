@@ -1,3 +1,13 @@
+# THREAD:-
+# Thread is a functionality of logics which executes simultaneously along with the other part of the program.
+# Thread is a lightweight process, the smallest unit of processing.
+
+# PROCESS:-
+# A program which is under execution is called a process.
+# We can define functionality of logic as a thread by overriding the run method of the thread class.
+# Thread class is a predefined class which is defined in threading model.
+# Threads can be executed group through start() method of thread class.
+
 #Multi-Threading Concept:-
 import threading
 class x(threading.Thread):
