@@ -1,0 +1,28 @@
+# Regular expression:-
+# If u want to represent a group of strings according to a particular format or pattern then we should go for regular expression
+# Regular expression is a declarative mechanism to represent a group of strings according to a particular format or pattern.
+# we can write a regular expression to represent the mobile number.
+# we can write a regular expression to represent the email id.
+# The main important application of regular expression are:-
+# 1. to develop validation logic.
+# 2. to develop pattern matching applications. ex, ctrl F in windows and grep in unix.
+# 3. to develop translator like compilers, interpreters, assemblers etc.
+# 4. to develop digital circuits.
+# 5. to develop communication protocols like TCP, UDP, etc.
+# we can develop regular expression based applications by using python re module.
+# This module contains several inbuilt functions to use regular expression very easily in our applications.
+
+# 1. compile:-
+# re module contains compile() function to compile the pattern into a regex object.
+
+# 2. findIter:-
+# return an iterator object which yields match objects of every match.
+# on match object we can call the following methods:- start, end, group.
+
+import re
+c=0
+p=re.finditer("ab","ababababab")
+for m in p:
+    c+=1
+    print(m.start(),"...",m.end(),"...",m.group())
+print("The number of occurences: ",c)
