@@ -26,3 +26,23 @@ for m in p:
     c+=1
     print(m.start(),"...",m.end(),"...",m.group())
 print("The number of occurences: ",c)
+
+# Important function of re module:-
+# 1. match()
+# 2. fullmatch()
+# 3. search()
+# 4. findall()
+# 5. finditer()
+# 6. sub()
+# 7. subn()
+# 8. split()
+
+# 1. match():- we can use match() function to check the given pattern at the beginning of the target string.
+# If the match is available then we will get the match object otherwise we will get none. 
+import re
+m=re.match("a","abc")
+if m!=None:
+    print("Match is available at the beginning of the string")
+    print(m.start(),"...",m.end())
+else:
+    print("Match is not available at the beginning of the string")
