@@ -246,3 +246,26 @@ p1.display()
 p1.delete()
 p1.delete()
 p1.display()
+
+# wap to reverse an element prsent in the stack
+class Stack:
+    def _init_(self):
+        self.stack = []
+    def push(self,element):
+        self.stack.append(element)
+    def pop(self):
+        return self.stack.pop()
+    def reverse(self):
+        self.stack = self.stack[::-1]
+    def display(self):
+        print(self.stack)
+s = Stack()
+s.push(10)
+s.push(20)
+s.push(30)
+s.push(40)
+s.push(50)
+s.display()
+s.reverse()
+s.display()
+
