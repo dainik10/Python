@@ -224,3 +224,25 @@ q1.display()
 
 # 1) Ascending order
 # 2) Descending order
+
+class pq:
+  def init(self):
+    self.queue=[]
+  def push(self,x):
+    self.queue.append(x)
+  def display(self):
+    print(self.queue)
+  def delete(self):
+    self.queue.sort() #[1,2,5,7,8]
+    print("Deleted element is:", self.queue.pop(0))
+
+p1=pq()
+p1.push(7)
+p1.push(2)
+p1.push(1)
+p1.push(8)
+p1.push(5)
+p1.display()
+p1.delete()
+p1.delete()
+p1.display()
