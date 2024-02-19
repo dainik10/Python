@@ -269,3 +269,48 @@ s.display()
 s.reverse()
 s.display()
 
+# Wap to reverse a string using stack approach using pop and push method and also object orientd programming
+class Stack:
+    def init(self):
+        self.stack = []
+
+    def push(self, element):
+        self.stack.append(element)
+
+    def pop(self):
+        if len(self.stack) <= 0:
+            print("Stack is Empty")
+        else:
+            return self.stack.pop()
+
+    def display(self):
+        print(self.stack)
+
+    def reverse(self, str):
+        for i in str:
+            self.push(i)
+        rev_str = ""
+        while len(self.stack) > 0:
+            rev_str += self.pop()
+        return rev_str
+
+s = Stack()
+input_str = "Smit"
+print("Original string: ", input_str)
+print("Reversed string: ", s.reverse(input_str))
+
+n1,n2,n3=map(int,input().split())
+stack1=list(map(int,input().split()))
+stack2=list(map(int,input().split()))
+stack3=list(map(int,input().split()))
+
+sum1,sum2,sum3=sum(stack1),sum(stack2),sum(stack3)
+
+while sum1!=sum2 or sum2!=sum3:
+    if sum1>=sum2 and sum1>=sum3:
+        sum1-=stack1.pop(0)
+    elif sum2>=sum1 and sum2>=sum3:
+        sum2-=stack2.pop(0)
+    elif sum3>=sum1 and sum3>=sum2:
+        sum3-=stack3.pop(0)
+print(sum1)
