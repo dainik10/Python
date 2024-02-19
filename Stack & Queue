@@ -215,3 +215,12 @@ q1.dequeue()
 q1.display()
 q1.dequeue()
 q1.display()
+
+
+# Priority Queue:-
+# -> Priority Queue is similar to queue operation. 
+# -> In priority queue we can assign the priority according to the priority elements gets deleted.
+# -> Different ways of priority queue:-
+
+# 1) Ascending order
+# 2) Descending order
