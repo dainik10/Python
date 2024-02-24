@@ -332,3 +332,28 @@ print(sum1)
 # step4:- if the character is operator then check stack is empty or not. if it is empty then push the operator into the stack.
 # if the stack is not empty then check the priority of the operator, if priority of the operator is greater than operator present at the stack then push the operator into the stack. if the priority of the operator is less than or equal to the operator present at the stack then pop the operator from the stack and add it to the postfix expression. then push the operator into the stack.
 # if the character is right parenthesis then pop all elements from the stack until reaching the right paranthesis.
+
+Operators = set(['+', '-', '*', '/', '(', ')', '^'])
+Priority = {'+':1, '-':1, '*':2, '/':2, '^':3}
+def infixToPostfix(expression):
+    stack = []
+    postfix = ''
+    for character in expression:
+        if character not in Operators:
+            postfix += character
+        elif character == '(':
+            stack.append('(')
+        elif character == ')':
+            while stack and stack[-1] != '(':
+                postfix += stack.pop()
+            stack.pop()
+        else:
+            while stack and stack[-1] != '(' and Priority[character] <= Priority[stack[-1]]:
+                postfix += stack.pop()
+            stack.append(character)
+    while stack:
+        
+        postfix += stack.pop()
+    return postfix
+expression = "A+B*(C^D-E)"
+print(infixToPostfix(expression))
