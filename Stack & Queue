@@ -314,3 +314,21 @@ while sum1!=sum2 or sum2!=sum3:
     elif sum3>=sum1 and sum3>=sum2:
         sum3-=stack3.pop(0)
 print(sum1)
+
+# Stack Application:-
+# Stack can be used to convert infix expression to postfix expression. 
+# It will also convert infix expression to prefix expression.
+# evaluation of postfix expression.
+# balancing of the symbols.
+
+# Infix expression:- If the operator is in between the operands then it is called infix expression.  A+B 
+# Postfix expression:- If the operator comes after the operands then it is called postfix expression.   AB+
+# Prefix expression:- If the operator comes before the operands then it is called prefix expression. +AB
+
+# Infix to Postfix conversion:-
+# step1:- Read the infix expression.
+# step2:- if the character is left parenthesis then push it into the stack
+# step3:- if the character is operand then add it to the postfix expression.
+# step4:- if the character is operator then check stack is empty or not. if it is empty then push the operator into the stack.
+# if the stack is not empty then check the priority of the operator, if priority of the operator is greater than operator present at the stack then push the operator into the stack. if the priority of the operator is less than or equal to the operator present at the stack then pop the operator from the stack and add it to the postfix expression. then push the operator into the stack.
+# if the character is right parenthesis then pop all elements from the stack until reaching the right paranthesis.
