@@ -1,0 +1,6 @@
+# Radix Sort:-
+#Rdix sort is a linear sorting algorithm that the element by processing them digit by digit. It is an efficient sorting algorithm foer integers or strings in fixed sized positions.
+# The key idea behind the radix sort  is a concept of place value.
+# It assumes that the sorting numbers digit by digit will result in an full ysorted list.
+# 1.least significant digit (LSD) radix sort
+# 2.most significant digit (MSD) radix sort
