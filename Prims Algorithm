@@ -1,0 +1,5 @@
+# Prims Algorithm:- Graph should be weighted connected and undirected
+# step1:- Consider any vertices 
+# step2:- Find all edges selected vertex to all new vertices , select least weighted edges and included in a tree , if least weighted edges form a circle than discarded and consider next least weighted edges and include in a tree minimum   spanning tree
+# step3:- Perform step2 until all the vertices are included in the Tree.
+# This Algorithm is used to find the minimum spanning tree of a graph.
