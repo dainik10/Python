@@ -9,3 +9,16 @@
 # n=int(input("enter n:"))
 # for i in range(n):
 #     print(catlan(i),end=" ")
+
+# n = 4
+# res=0+catlan(0)*catlan(3)= 0+5=5(0)
+# res=5+catlan(1)*catlan(2)=5+2=7(1)
+# res=7+catlan(2)*catlan(1)=7+2=9(2)
+# res=9+catlan(3)*catlan(0)=9+5=14(3) 
+
+# n = 5
+# res=0+catlan(0)*catlan(4)= 0+14=14(0)
+# res=14+catlan(1)*catlan(3)=14+5=19(1)
+# res=19+catlan(2)*catlan(2)=19+2=21(2)
+# res=21+catlan(3)*catlan(1)=21+5=26(3)
+# res=26+catlan(4)*catlan(0)=26+16=42(4)
