@@ -22,3 +22,17 @@
 # res=19+catlan(2)*catlan(2)=19+2=21(2)
 # res=21+catlan(3)*catlan(1)=21+5=26(3)
 # res=26+catlan(4)*catlan(0)=26+16=42(4)
+
+def catlan(n):
+    if (n==0 or n==1):
+        return 1
+    catlan=[0]*(n+1)
+    catlan[0]=1
+    catlan[1]=1
+    for i in range(2,n+1):
+        for j in range(i):
+            catlan[i]+=catlan[j]*catlan[i-j-1]
+    return catlan[n]
+n=int(input("enter n:"))
+for i in range(n):
+    print(catlan(i),end=" ")
