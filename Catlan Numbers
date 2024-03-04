@@ -1,0 +1,11 @@
+# formula for catlan number is Cn=(2n)!/(n+1)!n!
+# def catlan(n):
+#     if n<=1:
+#         return 1
+#     res=0
+#     for i in range(n):
+#         res+=catlan(i)*catlan(n-i-1)
+#     return res
+# n=int(input("enter n:"))
+# for i in range(n):
+#     print(catlan(i),end=" ")
