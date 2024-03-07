@@ -1,0 +1,44 @@
+# Bellmen-Floyd Algorithm:-
+# Graph should be weighted connected and directed
+# step1:- Consider any vertices
+# step2:- Find all edges selected vertex to all new vertices, select least weighted edges and included in a tree, if least weighted edges form a circle than discarded and consider next least weighted edges and include in a tree minimum spanning tree
+# step3:- Perform step2 until all the vertices are included in the Tree.
+# This Algorithm is used to find the minimum spanning tree of a graph.
+# This Algorithm is used to find the shortest path of a graph.
+# This Algorithm is used to find the negative cycle of a graph.
+
+class Graph:
+    def __init__(self, vertices):
+        self.V = vertices
+        self.graph = []
+
+    def add_edge(self, u, v, w):
+        self.graph.append([u, v, w])
+
+    def print_solution(self, dist):
+        print("Vertex Distance from Source")
+        for i in range(self.V):
+            print("{0}\t\t{1}".format(i, dist[i]))
+
+    def bellman_ford(self, src):
+        dist = [float("Inf")] * self.V
+        dist[src] = 0
+        for _ in range(self.V - 1):
+            for u, v, w in self.graph:
+                if dist[u] != float("Inf") and dist[u] + w < dist[v]:
+                    dist[v] = dist[u] + w
+        for u, v, w in self.graph:
+            if dist[u] != float("Inf") and dist[u] + w < dist[v]:
+                print("Graph contains negative weight cycle")
+                return
+        self.print_solution(dist)
+g = Graph(5)
+g.add_edge(0, 1, -1)
+g.add_edge(0, 2, 4)
+g.add_edge(1, 2, 3)
+g.add_edge(1, 3, 2)
+g.add_edge(1, 4, 2)
+g.bellman_ford(0)
+
+        
+        
