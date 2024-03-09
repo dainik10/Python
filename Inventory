@@ -1,0 +1,70 @@
+# A program for super market in python, where the options are inventory, buy from vendor, sell to customer, and exit and search by id and check in the inventory display name price and quantity
+
+# write a program to manage the inventory of a store
+# inventory: print the items id, name, quantinty and price of the items in the inventory
+# buying from vendor: vendor input id and quantity, price and update the inventory
+#selling to customer: ask for id/name, quantity and update the inventory
+# search by id: search the item by id and display the details
+# exit
+
+class DainikMart:
+    def __init__(self, id, name, quantity, price):
+        self.id = id
+        self.name = name
+        self.quantity = quantity
+        self.price = price
+
+    def display(self):
+        print(f"ID: {self.id}, Name: {self.name}, Quantity: {self.quantity}, Price: {self.price}")
+
+    def update(self, quantity):
+        self.quantity += quantity
+print("Welcome to the Dainik Mart")
+inventory = []
+inventory.append(DainikMart(1, "Apple", 100, 50))
+inventory.append(DainikMart(2, "Banana", 200, 30))
+inventory.append(DainikMart(3, "Orange", 150, 40))
+inventory.append(DainikMart(4, "Grapes", 300, 60))
+inventory.append(DainikMart(5, "Mango", 250, 70))
+while True:
+    print("1. Inventory")
+    print("2. Buy from Vendor")
+    print("3. Sell to Customer")
+    print("4. Search by ID")
+    print("5. Exit")
+    choice = int(input("Enter your choice: "))
+    if choice == 1:
+        print("Inventory")
+        for item in inventory:
+            item.display()
+    elif choice == 2:
+        print("Buy from Vendor")
+        id = int(input("Enter the id: "))
+        quantity = int(input("Enter the quantity: "))
+        price = int(input("Enter the price: "))
+        for item in inventory:
+            if item.id == id:
+                item.update(quantity)
+                break
+    elif choice == 3:
+        print("Sell to Customer")
+        id = int(input("Enter the id: "))
+        quantity = int(input("Enter the quantity: "))
+        for item in inventory:
+            if item.id == id:
+                item.update(-quantity)
+                break
+    elif choice == 4:
+        print("Search by ID")
+        id = int(input("Enter the id: "))
+        for item in inventory:
+            if item.id == id:
+                item.display()
+                break
+    elif choice == 5:
+        print("Exit")
+        break
+    else:
+        print("Invalid choice")
+    print()
+print("Thank you for using Dainik Mart. See you again!")
